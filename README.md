@@ -1,7 +1,7 @@
-# HW6
+# Image management application:
 
 ### To run program in terminal
-1. Clone this repo: `git clone https://github.com/wad-itmo-vnit/HW6-Dau-Tuan-Anh`
+1. Clone this repo
 2. Install requirement packages: `pip install -r requirements.txt`
 3. Run the server: `python hello.py`
 
