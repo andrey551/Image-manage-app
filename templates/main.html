@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/style.css">
+        <title>Batman</title>
+    </head>
+
+    <body>
+        <h1 style = "margin:center;text-align: center;">Welcome to Batman's world</h1>
+        <form action = "/logout" method="post">
+            <button type="submit" style="margin: right;" >Log out</button>
+        </form>
+        <form>
+            <a href="/changePw">Change your password</a>
+        </form>
+        <form>
+            <a href="/upload_avatar">Home Page</a>
+        </form>
+        <hr>
+        <br>       
+        <div class = "container">
+                <div class="row"><img id = "1" src = "/static/image/img1.jpg" alt="image1"></div>
+                <div class="row"><img id = "2" src = "/static/image/img2.jpg" alt="image2"></div>
+                <div class="row"><img id = "3" src = "/static/image/img3.jpg" alt="image3"></div>
+                <div class="row"><img id = "4" src = "/static/image/img4.jpg" alt="image4"></div>
+                <div class="row"><img id = "5" src = "/static/image/img5.jpg" alt="image5"></div>
+                <div class="row"><img id = "6" src = "/static/image/img6.jpg" alt="image6"></div>
+                <div class="row"><img id = "7" src = "/static/image/img7.jpg" alt="image7"></div>
+                <div class="row"><img id = "8" src = "/static/image/img8.jpg" alt="image8"></div>
+                <div class="row"><img id = "9" src = "/static/image/img9.jpg" alt="image9"></div>
+                <div class="row"><img id = "10" src = "/static/image/img10.jpg" alt="image10"></div>
+        </div>
+
+        <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+    
+    <script>
+        for (let i = 1; i <= 10; i++) {
+
+            // Get the modal
+            var modal = document.getElementById("myModal");
+            
+            // Get the image and insert it inside the modal - use its "alt" text as a caption
+            var img = document.getElementById("" + i);
+            var modalImg = document.getElementById("img01");
+            var captionText = document.getElementById("caption");
+            img.onclick = function(){
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+        }
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+            
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() { 
+                modal.style.display = "none";
+            }
+    </script>
+        <footer>@TuanAnhDau</footer>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="width: 300px; margin: auto;">
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul style="color:blue;">
+                {% for message in messages %}
+                    <li>{{message}}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    <form action="/register" enctype=multipart/form-data method="post">
+        <label for="user">User</label>
+        <input type="text" name="username">
+        <br>
+        <label for="password">Password</label>
+        <input type="password" name="password">
+        <br>
+        <label for="password_confirm">Password</label>
+        <input type="password" name="password_confirm">
+        <label for="avatar">choose avatar</label>
+        <input type="file" name="avatar" id="avatar">
+        <input type="submit" value="Register">
+    </form>
+    <span>Already have an account? <a href="/login">Log In</a></span>
+</body>
+</html>
